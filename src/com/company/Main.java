@@ -20,6 +20,7 @@ public class Main {
                 case "ny bestilling","ny pizza","ny","pizza" -> {
                     int number = input.nextInt();
                     int tid = input.nextInt();
+                    String note = input.nextLine();
 
                 }
                 case "fjern","slet" -> {
