@@ -24,10 +24,10 @@ public class Main {
 
                 }
                 case "fjern","slet" -> {
-
+                    Produktion.
                 }
                 case "kø","bestillinger" -> {
-
+                    Produktion.
                 }
                 case "afslut program" -> {
                     runProgram = false;
