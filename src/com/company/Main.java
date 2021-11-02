@@ -8,28 +8,44 @@ public class Main {
         String choice;
         Scanner input = new Scanner(System.in);
         Menu menu = new Menu();
+        Produktion produktion = new Produktion();
 
         boolean runProgram = true;
 
         while (runProgram) {
             choice = input.nextLine().trim().toLowerCase();
             switch (choice) {
-                case "menu" -> {
+                case "menu","m" -> {
                     System.out.println(menu.udskrivMenu());
                 }
                 case "ny bestilling","ny pizza","ny","pizza" -> {
-                    int number = input.nextInt();
+                    System.out.println("Indtast pizza nummer");
+                    int nummer = input.nextInt();
+                    System.out.println("Indtast afleverings tidspunkt");
                     int tid = input.nextInt();
-                    String note = input.nextLine();
+                    System.out.println("Indtast note");
+                    String note = input.next();
+                    System.out.println("Indtast et unikt navn");
+                    String name = input.next();
+                    produktion.addPizza(nummer,tid,note,name);
+                    System.out.println( "Pizza nr."+nummer+" er tilføjet\n" +
+                                        "Aflevringstid: "+tid+"\n" +
+                                        "Note: "+note+"\n" +
+                                        "Navn: "+name);
 
                 }
-                case "fjern","slet" -> {
-                    Produktion.
+                case "f","færdig","sælg" -> {
+                    System.out.println("Indtast pizza navn");
+                    String pizzaNavn = input.nextLine();
+                    produktion.sælgPizza(pizzaNavn);
+                }
+                case "slet","s" -> {
+
                 }
                 case "kø","bestillinger" -> {
-                    Produktion.
+                    produktion.hvisKø();
                 }
-                case "afslut program" -> {
+                case "x","afslut program" -> {
                     runProgram = false;
                 }
                 default -> {
