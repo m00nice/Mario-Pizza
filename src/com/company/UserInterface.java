@@ -18,7 +18,7 @@ public class UserInterface {
             case "menu","m" -> {
                 System.out.println(menu.udskrivMenu());
             }
-            case "ny bestilling","ny pizza","ny","pizza" -> {
+            case "n","ny" -> {
                 System.out.println("Indtast PizzaID");
                 int PizzaID = input.nextInt();
                 System.out.println("Indtast afleveringstidspunkt");
@@ -28,16 +28,18 @@ public class UserInterface {
                 odreHandler.tilføjOdre(PizzaID, afleveringTid, note);
 
             }
-            case "f","færdig","sælg" -> {
+            case "f","færdig" -> {
+                odreHandler.hvisKØ();
                 System.out.println("Indtast OrderID");
                 String OrderID = input.nextLine();
                 odreHandler.sælgPizza(OrderID);
             }
-            case "slet","s" -> {
-            String OrderID = input.nextLine();
-            odreHandler.sletPizza(OrderID);
+            case "s","slet" -> {
+                odreHandler.hvisKØ();
+                String OrderID = input.nextLine();
+                odreHandler.sletPizza(OrderID);
             }
-            case "kø","bestillinger","odre" -> {
+            case "k","kø","bestillinger","odre" -> {
                 odreHandler.hvisKØ();
             }
             case "x","afslut program" -> {

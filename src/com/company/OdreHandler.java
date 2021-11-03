@@ -21,11 +21,12 @@ public class OdreHandler {
         String OdreID = "pizza"+PizzaID+" "+random.nextInt(10)+random.nextInt(10)+random.nextInt(10);
         Odre odre = new Odre(PizzaID, afleveringTid, OdreID, note);
         odre.setPris(PizzaID);
+        odre.setNavn(PizzaID);
         KØ.add(odre);
         System.out.println(OdreID+" er nu tilføjet\n" +
                             "PizzaID: "+PizzaID+"\n" +
                             "Afleveringstid: "+afleveringTid+"\n" +
-                            "Note: "+note);
+                            "Pizza navn: "+odre.getNavn()+"\nNote: "+note);
     }
 
 
