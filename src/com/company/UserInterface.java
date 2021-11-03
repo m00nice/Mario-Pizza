@@ -1,7 +1,7 @@
 package com.company;
 
 import java.util.Scanner;
-import java.util.UUID;
+
 
 public class UserInterface {
     public void UserInterface(){
@@ -24,7 +24,7 @@ public class UserInterface {
                 System.out.println("Indtast afleveringstidspunkt");
                 int afleveringTid = input.nextInt();
                 System.out.println("Indtast note");
-                String note = input.nextLine();
+                String note = input.next();
                 odreHandler.tilføjOdre(PizzaID, afleveringTid, note);
 
             }
@@ -44,6 +44,9 @@ public class UserInterface {
             }
             case "x","afslut program" -> {
                 runProgram = false;
+            }
+            case "konto" -> {
+                odreHandler.getKonto();
             }
             default -> {
                 System.out.println("Lades til der skete en fejl, prøv igen.");

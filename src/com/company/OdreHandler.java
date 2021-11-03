@@ -47,4 +47,8 @@ public class OdreHandler {
         }
 
     }
+
+    public int getKonto() {
+        return konto;
+    }
 }
