@@ -8,7 +8,7 @@ public class Odre {
     private String note;
     private int pris;
 
-    public Odre(int PizzaID, int aflevringsTid, String OdreID, String note){
+    public Odre(int PizzaID, int afleveringsTid, String OdreID, String note){
         this.PizzaID = PizzaID;
         this.afleveringsTid = afleveringsTid;
         this.OdreID = OdreID;

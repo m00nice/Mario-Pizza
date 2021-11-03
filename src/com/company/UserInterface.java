@@ -29,12 +29,13 @@ public class UserInterface {
 
             }
             case "f","færdig","sælg" -> {
-                System.out.println("Indtast pizza navn");
-                String pizzaNavn = input.nextLine();
-                odreHandler.sælgPizza(pizzaNavn);
+                System.out.println("Indtast OrderID");
+                String OrderID = input.nextLine();
+                odreHandler.sælgPizza(OrderID);
             }
             case "slet","s" -> {
-
+            String OrderID = input.nextLine();
+            odreHandler.sletPizza(OrderID);
             }
             case "kø","bestillinger","odre" -> {
                 odreHandler.hvisKØ();
