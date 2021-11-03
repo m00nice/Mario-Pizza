@@ -2,6 +2,66 @@ package com.company;
 
 public class Menu {
 
+    Pizza Vesuvio = new Pizza(1,57,"Vesuvio");
+
+    Pizza Amerikaner = new Pizza(2,53,"Amerikaner");
+
+    Pizza Cacciatore = new Pizza(3,57,"Cacciatore");
+
+    Pizza Cabonara = new Pizza(4,63,"Cabonara");
+
+    Pizza Dennis = new Pizza(5,65,"Dennis");
+
+    Pizza Bertil = new Pizza(6,57,"Bertil");
+
+    Pizza Silvia = new Pizza(7,61,"Silvia");
+
+    Pizza Victoria = new Pizza(8,61,"Victoria");
+
+    Pizza Toronfo = new Pizza(9,61,"Toronfo");
+
+    Pizza Capricciosa = new Pizza(10,61,"Capricciosa");
+
+    Pizza Hawai = new Pizza(11,61,"Hawai");
+
+    Pizza Le_Blissola = new Pizza(12,61,"Le_Blissola");
+
+    Pizza Venezia = new Pizza(13,61,"Venezia");
+
+    Pizza Mafia = new Pizza(14,61,"Mafia");
+
+    Pizza Salat_Pizza = new Pizza(15,61,"Salat_Pizza");
+
+    Pizza Marco_Polo = new Pizza(16,61,"Marco_Polo");
+
+    Pizza Charlie = new Pizza(17,65,"Charlie");
+
+    Pizza Mexicano = new Pizza(18,63,"Mexicano");
+
+    Pizza Roma = new Pizza(19,61,"Roma");
+
+    Pizza Neptun = new Pizza(20,63,"Neptun");
+
+    Pizza Pratt = new Pizza(21,63,"Pratt");
+
+    Pizza Chicken = new Pizza(22,61,"Chicken");
+
+    Pizza Margherita = new Pizza(23,53,"Margherita");
+
+    Pizza Yankee = new Pizza(24,61,"Yankee");
+
+    Pizza Sicily = new Pizza(25,61,"Sicily");
+
+    Pizza DK = new Pizza(26,61,"DK");
+
+    Pizza Vegetariana = new Pizza(27,61,"Vegetariana");
+
+    Pizza Bodil = new Pizza(28,57,"Bodil");
+
+    Pizza Bowser = new Pizza(29,63,"Bowser");
+
+    Pizza Mamma_Mia = new Pizza(30,69,"Mamma_Mia");
+
     public String udskrivMenu(){
     return  "1. Vesuvio:.......tomatsauce, ost, skinke og oregano.....................................................................57 kr.\n" +
             "2. Amerikaner:....tomatsauce, ost, oksefars og oregano...................................................................53 kr.\n" +
