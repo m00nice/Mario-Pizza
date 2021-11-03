@@ -1,12 +1,14 @@
 package com.company;
 
 import java.util.ArrayList;
-import java.util.UUID;
+import java.util.Random;
+
 
 public class OdreHandler {
     private ArrayList<Odre> KØ = new ArrayList<>();
     private ArrayList<Odre> Arkiv = new ArrayList<>();
     private int konto = 0;
+    private Random random = new Random();
 
     public void hvisKØ() {
         for (int i = 0; i < KØ.size(); i++) {
@@ -16,7 +18,7 @@ public class OdreHandler {
 
 
     public void tilføjOdre(int PizzaID, int afleveringTid, String note){
-        String OdreID = UUID.randomUUID().toString();
+        String OdreID = "pizza"+PizzaID+" "+random.nextInt(10)+random.nextInt(10)+random.nextInt(10);
         Odre odre = new Odre(PizzaID, afleveringTid, OdreID, note);
         odre.setPris(PizzaID);
         KØ.add(odre);
