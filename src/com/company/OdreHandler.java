@@ -16,7 +16,7 @@ public class OdreHandler {
 
 
     public void tilføjOdre(int PizzaID, int afleveringTid, String note){
-        String OdreID = ();
+        String OdreID = UUID.randomUUID().toString();
         Odre odre = new Odre(PizzaID, afleveringTid, OdreID, note);
         odre.setPris(PizzaID);
         KØ.add(odre);
