@@ -25,7 +25,7 @@ public class OrdreHandler {
 
 
     public void tilføjOrdre(int PizzaID, String afleveringTid, String note){
-        String OrdreID = "pizza "+PizzaID+" "+random.nextInt(10)+random.nextInt(10)+random.nextInt(10);
+        String OrdreID = "pizza "+PizzaID+" "+random.nextInt(10)+random.nextInt(10)+random.nextInt(10)+random.nextInt(10)+random.nextInt(10);
         Ordre ordre = new Ordre(PizzaID, afleveringTid, OrdreID, note);
         ordre.setPris(PizzaID);
         ordre.setNavn(PizzaID);
