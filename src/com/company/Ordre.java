@@ -4,12 +4,12 @@ public class Ordre {
 
     private int PizzaID;
     private String OdreID;
-    private int afleveringsTid;
+    private String afleveringsTid;
     private String note;
     private int pris;
     private String navn;
 
-    public Ordre(int PizzaID, int afleveringsTid, String OdreID, String note){
+    public Ordre(int PizzaID, String afleveringsTid, String OdreID, String note){
         this.PizzaID = PizzaID;
         this.afleveringsTid = afleveringsTid;
         this.OdreID = OdreID;
@@ -29,7 +29,7 @@ public class Ordre {
         return note;
     }
 
-    public int getafleveringsTid() {
+    public String getafleveringsTid() {
         return afleveringsTid;
     }
 
@@ -106,5 +106,17 @@ public class Ordre {
 
     public String getNavn() {
         return navn;
+    }
+
+    @Override
+    public String toString() {
+        return "Ordre{" +
+                "PizzaID=" + PizzaID +
+                ", OdreID='" + OdreID + '\'' +
+                ", afleveringsTid='" + afleveringsTid + '\'' +
+                ", note='" + note + '\'' +
+                ", pris=" + pris +
+                ", navn='" + navn + '\'' +
+                '}';
     }
 }

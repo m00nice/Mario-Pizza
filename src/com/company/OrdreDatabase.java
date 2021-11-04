@@ -2,6 +2,7 @@ package com.company;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
 
@@ -11,15 +12,15 @@ public class OrdreDatabase {
 
 
 
-    public void saveToFile() throws FileNotFoundException {
+    public void gemFil() throws FileNotFoundException {
         File file = new File("ordrehistorik.txt");
-        PrintStream ps = new PrintStream(file);
+        PrintStream ps = new PrintStream(new FileOutputStream(file, true));
 
         for (Ordre ordre : ordreliste) {
             ps.println(ordre);
         }
 
-        System.out.println("Beers have been saved to Beer base in a file - Have a great day!");
+        System.out.println("Ordrerne for i dag er blevet gemt - hav en god dag!");
     }
 
 }
