@@ -8,7 +8,7 @@ public class UserInterface {
     String choice;
     Scanner input = new Scanner(System.in);
     Menu menu = new Menu();
-    OdreHandler odreHandler = new OdreHandler();
+    OrdreHandler odreHandler = new OrdreHandler();
 
     boolean runProgram = true;
         System.out.println("Velkommen til Marios Pizza App Version 1.0");

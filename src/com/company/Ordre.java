@@ -1,6 +1,6 @@
 package com.company;
 
-public class Odre {
+public class Ordre {
 
     private int PizzaID;
     private String OdreID;
@@ -9,7 +9,7 @@ public class Odre {
     private int pris;
     private String navn;
 
-    public Odre(int PizzaID, int afleveringsTid, String OdreID, String note){
+    public Ordre(int PizzaID, int afleveringsTid, String OdreID, String note){
         this.PizzaID = PizzaID;
         this.afleveringsTid = afleveringsTid;
         this.OdreID = OdreID;

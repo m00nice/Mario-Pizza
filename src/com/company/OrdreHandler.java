@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.Random;
 
 
-public class OdreHandler {
-    private ArrayList<Odre> KØ = new ArrayList<>();
-    private ArrayList<Odre> Arkiv = new ArrayList<>();
+public class OrdreHandler {
+    private ArrayList<Ordre> KØ = new ArrayList<>();
+    private ArrayList<Ordre> Arkiv = new ArrayList<>();
     private int konto = 0;
     private Random random = new Random();
 
@@ -19,7 +19,7 @@ public class OdreHandler {
 
     public void tilføjOdre(int PizzaID, int afleveringTid, String note){
         String OdreID = "pizza"+PizzaID+" "+random.nextInt(10)+random.nextInt(10)+random.nextInt(10);
-        Odre odre = new Odre(PizzaID, afleveringTid, OdreID, note);
+        Ordre odre = new Ordre(PizzaID, afleveringTid, OdreID, note);
         odre.setPris(PizzaID);
         odre.setNavn(PizzaID);
         KØ.add(odre);
