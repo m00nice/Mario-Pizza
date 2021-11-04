@@ -9,7 +9,7 @@ public class UserInterface {
     String choice;
     Scanner input = new Scanner(System.in);
     Menu menu = new Menu();
-    OrdreHandler odreHandler = new OrdreHandler();
+    OrdreHandler ordreHandler = new OrdreHandler();
 
     boolean runProgram = true;
         System.out.println("Velkommen til Marios Pizza App Version 1.0");
@@ -27,26 +27,26 @@ public class UserInterface {
                 String afleveringTid = input.next();
                 System.out.println("Indtast note");
                 String note = input.next();
-                odreHandler.tilføjOrdre(PizzaID, afleveringTid, note);
+                ordreHandler.tilføjOrdre(PizzaID, afleveringTid, note);
 
             }
             case "f","færdig" -> {
-                odreHandler.visKø();
+                ordreHandler.visKø();
                 System.out.println("Indtast OrdreID for at færdiggøre ordre");
                 String OrdreID = input.nextLine();
-                odreHandler.sælgPizza(OrdreID);
+                ordreHandler.sælgPizza(OrdreID);
             }
             case "s","slet" -> {
-                odreHandler.visKø();
+                ordreHandler.visKø();
                 System.out.println("Indtast OrdreID for at slette ordre");
                 String OrdreID = input.nextLine();
-                odreHandler.sletPizza(OrdreID);
+                ordreHandler.sletPizza(OrdreID);
             }
             case "k","kø","bestillinger","odre" -> {
-                odreHandler.visKø();
+                ordreHandler.visKø();
             }
             case "x","afslut program" -> {
-                odreHandler.gemTilFil();
+                ordreHandler.gemTilFil();
                 runProgram = false;
             }
 

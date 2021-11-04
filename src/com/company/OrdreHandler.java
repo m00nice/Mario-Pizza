@@ -19,7 +19,7 @@ public class OrdreHandler {
 
     public void visKø() {
         for (int i = 0; i < kø.size(); i++) {
-            System.out.println("OdreID: " + kø.get(i).getOrdreID() + "\nPizzaID: " + kø.get(i).getPizzaID() + "\nAfleveringstid: " + kø.get(i).getafleveringsTid() + "\nNote: " + kø.get(i).getNote() + "\n");
+            System.out.println("OrdreID: " + kø.get(i).getOrdreID() + "\nPizzaID: " + kø.get(i).getPizzaID() + "\nAfleveringstid: " + kø.get(i).getafleveringsTid() + "\nNote: " + kø.get(i).getNote() + "\n");
         }
     }
 
@@ -40,9 +40,9 @@ public class OrdreHandler {
 
 
 
-    public boolean sælgPizza(String OdreID){
+    public boolean sælgPizza(String OrdreID){
         for (int i = 0; i < kø.size(); i++){
-            if (kø.get(i).getOrdreID().equals(OdreID))
+            if (kø.get(i).getOrdreID().equals(OrdreID))
                 odb.ordreliste.add(kø.get(i));
             kø.remove(i);
 
@@ -51,9 +51,9 @@ public class OrdreHandler {
         return false;
 
     }
-    public void sletPizza(String OdreID){
+    public void sletPizza(String OrdreID){
         for (int i = 0; i < kø.size(); i++){
-            if (kø.get(i).getOrdreID().equals(OdreID))
+            if (kø.get(i).getOrdreID().equals(OrdreID))
                 kø.remove(i);
         }
 
