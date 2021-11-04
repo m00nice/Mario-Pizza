@@ -29,9 +29,13 @@ public class OrdreHandler {
         Ordre ordre = new Ordre(PizzaID, afleveringTid, OrdreID, note);
         ordre.setPris(PizzaID);
         ordre.setNavn(PizzaID);
+        if(PizzaID <= 30 && PizzaID >= 1){
         kø.add(ordre);
         odb.ordreliste.add(ordre);
-        System.out.println("OrdreID: "+OrdreID+"\nPizzaID: "+PizzaID+"\nPizza: "+ordre.getNavn()+"\nNote: "+note+"\nAfleveringstid: "+afleveringTid);
+        System.out.println("OrdreID: "+OrdreID+"\nPizzaID: "+PizzaID+"\nPizza: "+ordre.getNavn()+"\nNote: "+note+"\nAfleveringstid: "+afleveringTid);}
+        else {
+            System.out.println("Der skete en fejl med oprettelse af ordre");
+        }
     }
 
 
