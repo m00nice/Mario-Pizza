@@ -31,14 +31,15 @@ public class UserInterface {
             }
             case "f","færdig" -> {
                 odreHandler.hvisKØ();
-                System.out.println("Indtast OrderID");
-                String OrderID = input.nextLine();
-                odreHandler.sælgPizza(OrderID);
+                System.out.println("Indtast OdreID for at færdiggøre odre");
+                String OdreID = input.nextLine();
+                odreHandler.sælgPizza(OdreID);
             }
             case "s","slet" -> {
                 odreHandler.hvisKØ();
-                String OrderID = input.nextLine();
-                odreHandler.sletPizza(OrderID);
+                System.out.println("Indtast OdreID for at slette odre");
+                String OdreID = input.nextLine();
+                odreHandler.sletPizza(OdreID);
             }
             case "k","kø","bestillinger","odre" -> {
                 odreHandler.hvisKØ();
