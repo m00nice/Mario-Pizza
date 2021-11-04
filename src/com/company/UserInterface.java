@@ -32,15 +32,15 @@ public class UserInterface {
             }
             case "f","færdig" -> {
                 odreHandler.visKø();
-                System.out.println("Indtast OdreID for at færdiggøre odre");
-                String OdreID = input.nextLine();
-                odreHandler.sælgPizza(OdreID);
+                System.out.println("Indtast OrdreID for at færdiggøre ordre");
+                String OrdreID = input.nextLine();
+                odreHandler.sælgPizza(OrdreID);
             }
             case "s","slet" -> {
                 odreHandler.visKø();
-                System.out.println("Indtast OdreID for at slette odre");
-                String OdreID = input.nextLine();
-                odreHandler.sletPizza(OdreID);
+                System.out.println("Indtast OrdreID for at slette ordre");
+                String OrdreID = input.nextLine();
+                odreHandler.sletPizza(OrdreID);
             }
             case "k","kø","bestillinger","odre" -> {
                 odreHandler.visKø();
@@ -49,9 +49,7 @@ public class UserInterface {
                 odreHandler.gemTilFil();
                 runProgram = false;
             }
-            case "konto" -> {
-                odreHandler.getKonto();
-            }
+
             default -> {
                 System.out.println("Lades til der skete en fejl, prøv igen.");
             }
