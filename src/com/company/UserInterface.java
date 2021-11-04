@@ -11,6 +11,7 @@ public class UserInterface {
     OdreHandler odreHandler = new OdreHandler();
 
     boolean runProgram = true;
+        System.out.println("Velkommen til Marios Pizza App Version 1.0");
 
         while (runProgram) {
         choice = input.nextLine().toLowerCase();
