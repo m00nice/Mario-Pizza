@@ -15,7 +15,7 @@ public class UserInterface {
         System.out.println("Velkommen til Marios Pizza App Version 1.0");
 
         while (runProgram) {
-        choice = input.nextLine().toLowerCase();
+        choice = input.next().toLowerCase();
         switch (choice) {
             case "menu","m" -> {
                 System.out.println(menu.udskrivMenu());
@@ -24,28 +24,34 @@ public class UserInterface {
                 System.out.println("Indtast PizzaID");
                 int PizzaID = input.nextInt();
                 System.out.println("Indtast afleveringstidspunkt");
-                String afleveringTid = input.next();
+                input.nextLine();
+                String afleveringTid = input.nextLine();
                 System.out.println("Indtast note");
-                String note = input.next();
+                String note = input.nextLine();
+
                 ordreHandler.tilføjOrdre(PizzaID, afleveringTid, note);
 
             }
             case "f","færdig" -> {
                 ordreHandler.visKø();
                 System.out.println("Indtast OrdreID for at færdiggøre ordre");
+                input.nextLine();
                 String OrdreID = input.nextLine();
                 ordreHandler.sælgPizza(OrdreID);
+
             }
             case "s","slet" -> {
                 ordreHandler.visKø();
                 System.out.println("Indtast OrdreID for at slette ordre");
+                input.nextLine();
                 String OrdreID = input.nextLine();
                 ordreHandler.sletPizza(OrdreID);
+
             }
-            case "k","kø","bestillinger","odre" -> {
+            case "k","kø" -> {
                 ordreHandler.visKø();
             }
-            case "x","afslut program" -> {
+            case "x","afslut" -> {
                 ordreHandler.gemTilFil();
                 runProgram = false;
             }

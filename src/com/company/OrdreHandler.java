@@ -19,20 +19,19 @@ public class OrdreHandler {
 
     public void visKø() {
         for (int i = 0; i < kø.size(); i++) {
-            System.out.println("OrdreID: " + kø.get(i).getOrdreID() + "\nPizzaID: " + kø.get(i).getPizzaID() + "\nAfleveringstid: " + kø.get(i).getafleveringsTid() + "\nNote: " + kø.get(i).getNote() + "\n");
+            System.out.println("OrdreID: " + kø.get(i).getOrdreID() + "\nPizzaID: " + kø.get(i).getPizzaID() + "\nPizza: " + kø.get(i).getNavn() + "\nAfleveringstid: " + kø.get(i).getafleveringsTid() + "\nNote: " + kø.get(i).getNote() + "\n");
         }
     }
 
 
     public void tilføjOrdre(int PizzaID, String afleveringTid, String note){
-        String OrdreID = "pizza "+PizzaID+" "+random.nextInt(10)+random.nextInt(10)+random.nextInt(10)+random.nextInt(10)+random.nextInt(10);
+        String OrdreID = "pizza"+PizzaID+random.nextInt(10)+random.nextInt(10)+random.nextInt(10)+random.nextInt(10)+random.nextInt(10);
         Ordre ordre = new Ordre(PizzaID, afleveringTid, OrdreID, note);
         ordre.setPris(PizzaID);
         ordre.setNavn(PizzaID);
         if(PizzaID <= 30 && PizzaID >= 1){
         kø.add(ordre);
-        odb.ordreliste.add(ordre);
-        System.out.println("OrdreID: "+OrdreID+"\nPizzaID: "+PizzaID+"\nPizza: "+ordre.getNavn()+"\nNote: "+note+"\nAfleveringstid: "+afleveringTid);}
+        System.out.println("Ordre tilføjet\nOrdreID: "+OrdreID+"\nPizzaID: "+PizzaID+"\nPizza: "+ordre.getNavn()+"\nNote: "+note+"\nAfleveringstid: "+afleveringTid);}
         else {
             System.out.println("Der skete en fejl med oprettelse af ordre");
         }
@@ -42,20 +41,25 @@ public class OrdreHandler {
 
     public boolean sælgPizza(String OrdreID){
         for (int i = 0; i < kø.size(); i++){
-            if (kø.get(i).getOrdreID().equals(OrdreID))
+            if (kø.get(i).getOrdreID().equals(OrdreID)) {
                 odb.ordreliste.add(kø.get(i));
-            kø.remove(i);
+                System.out.println(kø.get(i).getOrdreID()+" er solgt");
+                kø.remove(i);
+                return true;
+            }
 
-            return true;
         }
         return false;
 
     }
-    public void sletPizza(String OrdreID){
+    public boolean sletPizza(String OrdreID){
         for (int i = 0; i < kø.size(); i++){
             if (kø.get(i).getOrdreID().equals(OrdreID))
+                System.out.println(kø.get(i).getOrdreID()+" er slettet");
                 kø.remove(i);
+            return true;
         }
+return false;
 
     }
     public void gemTilFil() throws FileNotFoundException {

@@ -9,10 +9,10 @@ public class Ordre {
     private int pris;
     private String navn;
 
-    public Ordre(int PizzaID, String afleveringsTid, String OdreID, String note){
+    public Ordre(int PizzaID, String afleveringsTid, String OrdreID, String note){
         this.PizzaID = PizzaID;
         this.afleveringsTid = afleveringsTid;
-        this.OrdreID = OdreID;
+        this.OrdreID = OrdreID;
         this.note = note;
     }
 
